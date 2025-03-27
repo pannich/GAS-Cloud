@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+
+# Test Annotator
+touch  /home/ec2-user/mpcs-cc/test_ann.txt
+
+# Download TLS .pem and key
+aws s3 cp s3://mpcs-cc-resources/ssl/privkey.pem /home/ec2-user/mpcs-cc
+aws s3 cp s3://mpcs-cc-resources/ssl/fullchain.pem /home/ec2-user/mpcs-cc
+
+# Download source ann code
+aws s3 cp s3://mpcs-cc-students/nichada/gas_annotator.zip /home/ec2-user/mpcs-cc
+unzip /home/ec2-user/mpcs-cc/gas_annotator.zip -d /home/ec2-user/mpcs-cc/
+
+# Change ownership
+chown -R ec2-user:ec2-user /home/ec2-user/mpcs-cc/
+
+# Executable
+chmod +x /home/ec2-user/mpcs-cc/run_ann.sh
+
+# Run
+sudo -u ec2-user /home/ec2-user/mpcs-cc/run_ann.sh &

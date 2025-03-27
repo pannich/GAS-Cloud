@@ -1,0 +1,31 @@
+ssh -A -i ~/.ssh/nichada.pem ec2-user@ec2-52-5-72-221.compute-1.amazonaws.com
++---------------------+-----------------+-----------------+-------------------+
+| Instance ID         | Instance Type   | Tags            | Public DNS Name   |
++=====================+=================+=================+===================+
+| i-046e90cd74e710701 | t2.nano         | nichada-gas-ann | ec2-52-5-72-221.compute-1.amazonaws.com	                  |
++---------------------+-----------------+-----------------+-------------------+
+ssh -A -i ~/.ssh/nichada.pem ec2-user@ec2-18-234-177-88.compute-1.amazonaws.com
++---------------------+-----------------+-----------------+-------------------+
+| Instance ID         | Instance Type   | Tags            | Public DNS Name   |
++=====================+=================+=================+===================+
+| i-05f4ebde6b6e18c16 | t2.nano         | nichada-gas-web | ec2-18-234-177-88.compute-1.amazonaws.com	                  |
++---------------------+-----------------+-----------------+-------------------+
+ssh -A -i ~/.ssh/nichada.pem ec2-user@ec2-107-22-62-60.compute-1.amazonaws.com
++---------------------+-----------------+------------------+-------------------+
+| Instance ID         | Instance Type   | Tags             | Public DNS Name   |
++=====================+=================+==================+===================+
+| i-069e11bd27c3427f7 | t2.nano         | nichada-gas-util | ec2-107-22-62-60.compute-1.amazonaws.com	                  |
++---------------------+-----------------+------------------+-------------------+
+ec2-107-22-62-60.compute-1.amazonaws.com
+
+ssh -A -i ~/.ssh/nichada.pem ec2-user@ec2-3-81-13-127.compute-1.amazonaws.com	
++---------------------+-----------------+-------------------+-------------------+
+| Instance ID         | Instance Type   | Tags              | Public DNS Name   |
++=====================+=================+===================+===================+
+| i-09b8c33badaf5dcf3 | t2.nano         | nichada-gas-util2 | ec2-3-81-13-127.compute-1.amazonaws.com	                  |
++---------------------+-----------------+-------------------+-------------------+
+
+
+
+load balancer 1
+ssh -A -i ~/.ssh/nichada.pem ec2-user@
